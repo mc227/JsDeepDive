@@ -1,4 +1,4 @@
-﻿var allProducts = [];
+﻿const allProducts = [];
  
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('add').addEventListener('click', doAdd);
@@ -10,27 +10,27 @@ document.addEventListener('DOMContentLoaded', function() {
 function doAdd() {
 
     // Get the product suggestion (text).
-    var description = document.getElementById('description').value;
+    const description = document.getElementById('description').value;
 
     // Get the user's email address (text).
-    var email = document.getElementById('email').value;
+    const email = document.getElementById('email').value;
 
     // Get the recommended price (float).
-    var priceStr = document.getElementById('price').value;
-    var price = parseFloat(priceStr).toFixed(2);
+    const priceStr = document.getElementById('price').value;
+    const price = parseFloat(priceStr).toFixed(2);
 
     // Get the estimated sales/year (int).
-    var salesStr = document.getElementById('sales').value;
-    var sales = parseInt(salesStr);
+    const salesStr = document.getElementById('sales').value;
+    const sales = parseInt(salesStr);
 
     // Build a formatted string for this product suggestion.
-    var product = description.toUpperCase().big().bold().fontcolor('orange') + '<br/>'
+    let product = description.toUpperCase().big().bold().fontcolor('orange') + '<br/>'
                                 + 'Suggested by ' + email + '<br/>'
                                 + '£' + price + ' [projected sales ' + sales + ']<br/>';
 
     // Append the current date/time to the product string.
-    var ts = new Date();
-    var tsStr = ts.getDate() + '/' + (ts.getMonth() + 1) + '/' + ts.getFullYear() + ', ' +
+    const ts = new Date();
+    const tsStr = ts.getDate() + '/' + (ts.getMonth() + 1) + '/' + ts.getFullYear() + ', ' +
                 pad(ts.getHours()) + ':' + pad(ts.getMinutes()) + ':' + pad(ts.getSeconds());
     product += tsStr.fontcolor('blue');
 
@@ -43,7 +43,7 @@ function doAdd() {
 
 function displayProducts(products, targetElement) {
 
-    var str = '<ul>';
+    let str = '<ul>';
     for (var i in products) {
         str += '<li>' + products[i] + '</li>';
     }
@@ -65,15 +65,15 @@ function doReverse() {
 function doSearch() {
 
     // Create a RegExp object, based on the search string entered by the user.
-    var searchString = document.getElementById('searchString').value;
-    var re = new RegExp(searchString, 'i');
+    const searchString = document.getElementById('searchString').value;
+    const re = new RegExp(searchString, 'i');
 
     // Create an array that contains all the products that match the search string.
-    var matchingProducts = []
-    for (var i in allProducts) {
+    const matchingProducts = []
+    for (let i in allProducts) {
 
         // Get the next product from the global array.
-        var curr = allProducts[i];
+        const curr = allProducts[i];
 
         // If it matches the search string, add it into the array of matches.
         if (re.test(curr)) {

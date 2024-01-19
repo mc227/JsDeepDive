@@ -1,6 +1,6 @@
 ﻿const allProducts = [];
  
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('add').addEventListener('click', doAdd);
     document.getElementById('sort').addEventListener('click', doSort);
     document.getElementById('reverse').addEventListener('click', doReverse);

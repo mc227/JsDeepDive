@@ -117,3 +117,8 @@
 //     forColor: 'red'
 // })
 
+let [http='80', https='443'] = []
+console.log(http, https)
+
+// let {x=0, y=0, z=0} = {x: 100, y:200}
+// console.log(x,y,z)

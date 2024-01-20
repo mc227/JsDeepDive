@@ -129,12 +129,26 @@
 
 // displayPoint({x:10,y:20,z:30})
 
-function displayPoint(obj) {
-    let x = obj.x
-    let y = obj.y
-    let z = obj.z
+// function displayPoint(obj) {
+//     let x = obj.x
+//     let y = obj.y
+//     let z = obj.z
     
-    console.log(x, y, z)
-}
+//     console.log(x, y, z)
+// }
 
-displayPoint({x:10,y:20,z:30})
+// displayPoint({x:10,y:20,z:30})
+
+// function displayPoint({x=0, y=0,z=0}) {
+//     console.log(x,y,z)
+// }
+
+// displayPoint({x:10, z:30})
+
+// function displayPoint({x:h=0, y:w=0,z:d=0}) {
+//     console.log(h,w,d)
+// }
+
+// displayPoint({x:10, z:30})
+
+

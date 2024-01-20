@@ -151,4 +151,11 @@
 
 // displayPoint({x:10, z:30})
 
+function displayPoint({x=0,y=0,z=0}={x:1,y:2,z:3}){
+    console.log(x,y,z)
+}
+
+displayPoint({x:10,z:30})
+displayPoint({})
+displayPoint()
 

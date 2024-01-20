@@ -34,10 +34,11 @@ function doAdd() {
 
   allProducts.push(product); // Redisplay all the products.
 
-  displayProducts(allProducts, 'allProductsList');
+  displayProducts(allProducts);
 }
 
-function displayProducts(products, targetElement) {
+function displayProducts(products) {
+  var targetElement = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'allProductsList';
   var str = '<ul>';
 
   for (var i in products) {

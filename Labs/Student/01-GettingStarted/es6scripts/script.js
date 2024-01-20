@@ -48,10 +48,10 @@ function doAdd() {
     allProducts.push(product);
 
     // Redisplay all the products.
-    displayProducts(allProducts, 'allProductsList');
+    displayProducts(allProducts);
 }
 
-function displayProducts(products, targetElement) {
+function displayProducts(products, targetElement='allProductsList') {
 
     let str = '<ul>';
     for (var i in products) {

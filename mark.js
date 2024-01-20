@@ -105,13 +105,15 @@
 // let {x:h, y:w, z:d} = {x:10, y:20, z:30}
 // console.log(h, w, d)
 
-function f1(obj) {
-    let {x,y} = obj
-    console.log(x,y)
-}
+// function f1(obj) {
+//     let {x,y} = obj
+//     console.log(x,y)
+// }
 
-f1({
-    x:100,
-    y:200,
-    z:300
-})
+// f1({
+//     x:100,
+//     y:200,
+//     z:300,
+//     forColor: 'red'
+// })
+

@@ -151,11 +151,23 @@
 
 // displayPoint({x:10, z:30})
 
-function displayPoint({x=0,y=0,z=0}={x:1,y:2,z:3}){
-    console.log(x,y,z)
+// function displayPoint({x=0,y=0,z=0}={x:1,y:2,z:3}){
+//     console.log(x,y,z)
+// }
+
+// displayPoint({x:10,z:30})
+// displayPoint({})
+// displayPoint()
+
+function convertEuros(euroAmount) {
+    return {
+        usd: euroAmount * 1.17,
+        gbp: euroAmount * 0.89,
+        nok: euroAmount * 9.27
+    }
 }
 
-displayPoint({x:10,z:30})
-displayPoint({})
-displayPoint()
+let allAmounts = convertEuros(100)
+let {usd, gbp, nok} = convertEuros(100)
 
+console.log(usd)

@@ -3,8 +3,14 @@
 var allProducts = [];
 document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('add').addEventListener('click', doAdd);
-  document.getElementById('sort').addEventListener('click', doSort);
-  document.getElementById('reverse').addEventListener('click', doReverse);
+  document.getElementById('sort').addEventListener('click', function () {
+    allProducts.sort();
+    displayProducts(allProducts);
+  });
+  document.getElementById('reverse').addEventListener('click', function () {
+    allProducts.reverse();
+    displayProducts(allProducts);
+  });
   document.getElementById('search').addEventListener('click', doSearch);
 });
 
@@ -40,17 +46,15 @@ function displayProducts(products, targetElement) {
 
   str += '</ul>';
   document.getElementById(targetElement).innerHTML = str;
-}
+} // function doSort() {
+//     allProducts.sort();
+//     displayProducts(allProducts, 'allProductsList');
+// }
+// function doReverse() {
+//     allProducts.reverse();
+//     displayProducts(allProducts, 'allProductsList');
+// }
 
-function doSort() {
-  allProducts.sort();
-  displayProducts(allProducts, 'allProductsList');
-}
-
-function doReverse() {
-  allProducts.reverse();
-  displayProducts(allProducts, 'allProductsList');
-}
 
 function doSearch() {
   // Create a RegExp object, based on the search string entered by the user.

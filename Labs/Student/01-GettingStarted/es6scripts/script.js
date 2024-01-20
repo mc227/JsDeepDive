@@ -1,9 +1,19 @@
 ﻿const allProducts = [];
  
 document.addEventListener('DOMContentLoaded', () => {
+    
     document.getElementById('add').addEventListener('click', doAdd);
-    document.getElementById('sort').addEventListener('click', doSort);
-    document.getElementById('reverse').addEventListener('click', doReverse);
+
+    document.getElementById('sort').addEventListener('click', () => {
+        allProducts.sort();
+        displayProducts(allProducts);
+    });
+
+    document.getElementById('reverse').addEventListener('click', () => {
+        allProducts.reverse();
+        displayProducts(allProducts);
+    });
+
 	document.getElementById('search').addEventListener('click', doSearch);
 });
 
@@ -52,15 +62,15 @@ function displayProducts(products, targetElement) {
     document.getElementById(targetElement).innerHTML = str;
 }
 
-function doSort() {
-    allProducts.sort();
-    displayProducts(allProducts, 'allProductsList');
-}
+// function doSort() {
+//     allProducts.sort();
+//     displayProducts(allProducts, 'allProductsList');
+// }
 
-function doReverse() {
-    allProducts.reverse();
-    displayProducts(allProducts, 'allProductsList');
-}
+// function doReverse() {
+//     allProducts.reverse();
+//     displayProducts(allProducts, 'allProductsList');
+// }
 
 function doSearch() {
 

@@ -117,8 +117,24 @@
 //     forColor: 'red'
 // })
 
-let [http='80', https='443'] = []
-console.log(http, https)
+// let [http='80', https='443'] = []
+// console.log(http, https)
 
 // let {x=0, y=0, z=0} = {x: 100, y:200}
 // console.log(x,y,z)
+
+// function displayPoint({x,y,z}){
+//     console.log(x,y,z)
+// }
+
+// displayPoint({x:10,y:20,z:30})
+
+function displayPoint(obj) {
+    let x = obj.x
+    let y = obj.y
+    let z = obj.z
+    
+    console.log(x, y, z)
+}
+
+displayPoint({x:10,y:20,z:30})

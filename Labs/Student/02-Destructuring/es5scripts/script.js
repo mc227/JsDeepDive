@@ -18,18 +18,20 @@ function doAdd() {
   setHtml("#item1", item1);
   setHtml("#itemOthers", itemOthers.join(", ")); // Exercise 3 - Object destructuring.
 
-  function stats(numbers) {
+  function stats() {
+    var sum = 0;
+
+    for (var i in numbers) {
+      sum += numbers[i];
+    }
+
     return {
-      sum: numbers.reduce(function (accumulator, currentValue) {
-        return accumulator + currentValue;
-      }, 0),
-      average: numbers.reduce(function (accumulator, currentValue) {
-        return accumulator + currentValue;
-      }, 0) / numbers.length
+      sum: sum,
+      average: sum / numbers.length
     };
   }
 
-  var _stats = stats(numbers),
+  var _stats = stats(),
       sum = _stats.sum,
       average = _stats.average;
 

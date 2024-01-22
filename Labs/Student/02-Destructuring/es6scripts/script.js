@@ -18,13 +18,14 @@ function doAdd() {
     setHtml("#itemOthers", itemOthers.join(", "))
 
     // Exercise 3 - Object destructuring.
-    function stats(numbers){
-        return {
-            sum: numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0),
-            average: (numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0))/numbers.length
+    function stats() {
+        let sum = 0
+        for (let i in numbers) {
+            sum += numbers[i]
         }
+        return {sum: sum, average: sum/numbers.length}
     }
-    let {sum, average} = stats(numbers)
+    let {sum, average} = stats()
     setHtml("#sum", sum)
     setHtml("#average", average)
 

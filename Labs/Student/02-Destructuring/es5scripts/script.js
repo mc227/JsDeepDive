@@ -10,7 +10,13 @@ function doAdd() {
   var number = parseInt(numberElem.value);
   numbers.push(number);
   numberElem.value = ''; // Exercise 2 - Array destructuring.
-  // Exercise 3 - Object destructuring.
+
+  var item0 = numbers[0],
+      item1 = numbers[1],
+      itemOthers = numbers.slice(2);
+  setHtml("#item0", item0);
+  setHtml("#item1", item1);
+  setHtml("#itemOthers", itemOthers.join(", ")); // Exercise 3 - Object destructuring.
   // Exercise 4 - More object destructuring.
 }
 

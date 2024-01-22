@@ -12,7 +12,10 @@ function doAdd() {
     numberElem.value = ''
 
     // Exercise 2 - Array destructuring.
-
+    let [item0, item1, ...itemOthers] = numbers
+    setHtml("#item0", item0)
+    setHtml("#item1", item1)
+    setHtml("#itemOthers", itemOthers.join(", "))
 
     // Exercise 3 - Object destructuring.
 

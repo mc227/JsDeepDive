@@ -17,7 +17,24 @@ function doAdd() {
   setHtml("#item0", item0);
   setHtml("#item1", item1);
   setHtml("#itemOthers", itemOthers.join(", ")); // Exercise 3 - Object destructuring.
-  // Exercise 4 - More object destructuring.
+
+  function stats(numbers) {
+    return {
+      sum: numbers.reduce(function (accumulator, currentValue) {
+        return accumulator + currentValue;
+      }, 0),
+      average: numbers.reduce(function (accumulator, currentValue) {
+        return accumulator + currentValue;
+      }, 0) / numbers.length
+    };
+  }
+
+  var _stats = stats(numbers),
+      sum = _stats.sum,
+      average = _stats.average;
+
+  setHtml("#sum", sum);
+  setHtml("#average", average); // Exercise 4 - More object destructuring.
 }
 
 function setHtml(selector, html) {

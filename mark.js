@@ -159,15 +159,42 @@
 // displayPoint({})
 // displayPoint()
 
-function convertEuros(euroAmount) {
-    return {
-        usd: euroAmount * 1.17,
-        gbp: euroAmount * 0.89,
-        nok: euroAmount * 9.27
-    }
-}
+// function convertEuros(euroAmount) {
+//     return {
+//         usd: euroAmount * 1.17,
+//         gbp: euroAmount * 0.89,
+//         nok: euroAmount * 9.27
+//     }
+// }
 
-let allAmounts = convertEuros(100)
-let {usd, gbp, nok} = convertEuros(100)
+// let allAmounts = convertEuros(100)
+// let {usd, gbp, nok} = convertEuros(100)
 
-console.log(usd)
+// console.log(usd)
+
+let num1 = 0o74
+// console.log(num1)
+let num2 = 0b111100
+// console.log(num2)
+let num3 = 0x3C
+// console.log(num3)
+// console.log(Number.isInteger(1234))
+// console.log(Number.isInteger(3.14))
+// console.log(Number.isNaN(0/0))
+// console.log(Number.isNaN('wibble'))
+// console.log(Number.isNaN(1234))
+let n = Math.pow(2,53)
+// console.log(Number.isSafeInteger(n))
+// console.log(Number.isSafeInteger(n-1))
+// const s = 'dog'
+// for (const c of s) {
+//     console.log(c)
+// }
+
+// const s = "Llanfairpwll"
+
+// console.log(s.includes('lan'))
+let s = 'The cat sat on the mat'
+
+let r1 = s.search(/.at/)
+console.log(r1)
